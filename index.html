@@ -15,7 +15,22 @@
 
     <script>
         function arabToRoman(number) {
-            return "I";
+            const romanNumbers = [
+                { value: 10, symbol: "X" },
+                { value: 5, symbol: "V" },
+                { value: 1, symbol: "I" }
+            ];
+
+            let result = "";
+
+            for (let i = 0; i < romanNumbers.length; i++) {
+                while (number >= romanNumbers[i].value) {
+                    result += romanNumbers[i].symbol;
+                    number -= romanNumbers[i].value;
+                }
+            }
+
+            return result;
         }
 
         QUnit.module("Arab - római szám konverter tesztelése");
@@ -23,7 +38,7 @@
         QUnit.test("1 átalakítása", function(assert) {
             assert.equal(arabToRoman(1), "I");
         });
-        
+
         QUnit.test("Egyszerű számok átalakítása", function(assert) {
             assert.equal(arabToRoman(2), "II");
             assert.equal(arabToRoman(3), "III");
