@@ -45,6 +45,15 @@
             assert.equal(arabToRoman(5), "V");
             assert.equal(arabToRoman(10), "X");
         });
+
+        QUnit.test("Kivonásos római számok", function(assert) {
+            assert.equal(arabToRoman(4), "IV");
+            assert.equal(arabToRoman(9), "IX");
+            assert.equal(arabToRoman(40), "XL");
+            assert.equal(arabToRoman(90), "XC");
+            assert.equal(arabToRoman(400), "CD");
+            assert.equal(arabToRoman(900), "CM");
+        });
     </script>
 
 </body>
