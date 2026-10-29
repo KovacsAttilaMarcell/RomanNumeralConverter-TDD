@@ -64,6 +64,13 @@
             assert.equal(arabToRoman(400), "CD");
             assert.equal(arabToRoman(900), "CM");
         });
+
+        QUnit.test("Összetett számok átalakítása", function(assert) {
+            assert.equal(arabToRoman(14), "XIV");
+            assert.equal(arabToRoman(49), "XLIX");
+            assert.equal(arabToRoman(58), "LVIII");
+            assert.equal(arabToRoman(1994), "MCMXCIV");
+        });
     </script>
 
 </body>
