@@ -18,7 +18,9 @@
 
         QUnit.module("Arab - római szám konverter tesztelése");
 
-        // Ide kerülnek majd a QUnit-tesztek.
+        QUnit.test("1 átalakítása", function(assert) {
+            assert.equal(arabToRoman(1), "I");
+        });
     </script>
 
 </body>
