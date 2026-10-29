@@ -71,6 +71,19 @@
             assert.equal(arabToRoman(58), "LVIII");
             assert.equal(arabToRoman(1994), "MCMXCIV");
         });
+
+        QUnit.test("Legnagyobb megengedett szám", function(assert) {
+            assert.equal(arabToRoman(3999), "MMMCMXCIX");
+        });
+
+        QUnit.test("Érvénytelen számok", function(assert) {
+            assert.equal(arabToRoman(0), "");
+            assert.equal(arabToRoman(-5), "");
+            assert.equal(arabToRoman(4000), "");
+            assert.equal(arabToRoman(2.5), "");
+            assert.equal(arabToRoman(-1.5), "");
+            assert.equal(arabToRoman("10"), "");
+        });
     </script>
 
 </body>
