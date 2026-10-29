@@ -23,6 +23,13 @@
         QUnit.test("1 átalakítása", function(assert) {
             assert.equal(arabToRoman(1), "I");
         });
+        
+        QUnit.test("Egyszerű számok átalakítása", function(assert) {
+            assert.equal(arabToRoman(2), "II");
+            assert.equal(arabToRoman(3), "III");
+            assert.equal(arabToRoman(5), "V");
+            assert.equal(arabToRoman(10), "X");
+        });
     </script>
 
 </body>
