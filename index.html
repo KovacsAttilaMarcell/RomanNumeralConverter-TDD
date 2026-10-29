@@ -37,10 +37,10 @@
 
             let result = "";
 
-            for (let i = 0; i < romanNumbers.length; i++) {
-                while (number >= romanNumbers[i].value) {
-                    result += romanNumbers[i].symbol;
-                    number -= romanNumbers[i].value;
+            for (const roman of romanNumbers) {
+                while (number >= roman.value) {
+                    result += roman.symbol;
+                    number -= roman.value;
                 }
             }
 
